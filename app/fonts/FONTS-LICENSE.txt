@@ -1,0 +1,12 @@
+The Liberation Sans fonts bundled in app/fonts/ (LiberationSans-Bold.ttf,
+LiberationSans-Italic.ttf, LiberationSans-Regular.ttf) are licensed under the
+SIL Open Font License, Version 1.1 (26 February 2007).
+
+The fonts are copyrighted by their respective authors and released under the
+SIL Open Font License, Version 1.1. The full text of the license is available
+at https://openfontlicense.org/ (scripts.sil.org/OFL).
+
+In short: the fonts may be freely used, studied, modified and redistributed,
+with or without the software that bundles them, provided the fonts are not
+sold on their own and any modified versions are released under the same
+license and do not use the reserved font names without permission.

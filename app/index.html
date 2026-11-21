@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Diagonal — GTA 6 Cover Art Studio</title>
+<meta name="description" content="Turn your photos into a GTA VI-style diagonal cover — three panels, a sunset title band and giant tilted lettering. Fully offline, no upload, in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>VICE <span>DIAGONAL</span></h1>
+  <p class="tagline">Turn your photos into a GTA VI-style cover — offline, in your browser.</p>
+</header>
+
+<main class="studio">
+  <section class="controls" aria-label="Cover controls">
+    <div class="card">
+      <h2>Photos</h2>
+      <label>Panel 1 <input type="file" id="file0" accept="image/*"></label>
+      <label>Panel 2 <input type="file" id="file1" accept="image/*"></label>
+      <label>Panel 3 <input type="file" id="file2" accept="image/*"></label>
+      <button id="onePhoto" type="button">One photo for all panels</button>
+      <p class="hint">Click a panel in the preview to select it. Drag to move the photo, scroll to zoom.</p>
+    </div>
+
+    <div class="card">
+      <h2>Layout</h2>
+      <select id="layout">
+        <option value="slash">Slash — all panels lean one way</option>
+        <option value="chevron">Chevron — panels meet in a V</option>
+        <option value="stack">Stack — panels step diagonally</option>
+      </select>
+      <h2>Grade</h2>
+      <select id="grade">
+        <option value="vice-sunset">Vice Sunset</option>
+        <option value="neon-night">Neon Night</option>
+        <option value="palm-gold">Palm Gold</option>
+        <option value="ocean-drive">Ocean Drive</option>
+        <option value="noir">Noir</option>
+      </select>
+      <h2>Title style</h2>
+      <select id="titleStyle">
+        <option value="white-block">White Block</option>
+        <option value="sunset-gradient">Sunset Gradient</option>
+        <option value="neon-outline">Neon Outline</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <h2>Words</h2>
+      <label>Title <input type="text" id="title" value="VICE DIAGONAL" maxlength="24"></label>
+      <label>Subtitle <input type="text" id="subtitle" value="LEONIDA NIGHTS" maxlength="40"></label>
+      <div class="row">
+        <button id="undo" type="button">Undo</button>
+        <button id="redo" type="button">Redo</button>
+        <button id="surprise" type="button">Surprise me</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="preview" aria-label="Cover preview">
+    <canvas id="preview" width="960" height="540"></canvas>
+    <p class="hint" id="panelLabel">Panel 1 selected</p>
+  </section>
+</main>
+
+<section class="export" aria-label="Export">
+  <h2>Export PNG</h2>
+  <div class="row">
+    <button type="button" data-export="1080x1080">Square 1080 × 1080</button>
+    <button type="button" data-export="1080x1350">Portrait 1080 × 1350</button>
+    <button type="button" data-export="1920x1080">Wide 1920 × 1080</button>
+  </div>
+</section>
+
+<footer>100% offline — your photos never leave your machine.</footer>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
